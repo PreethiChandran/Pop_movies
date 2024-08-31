@@ -1,0 +1,144 @@
+body{margin:0 auto; padding: 0 auto;}
+.header{
+    float:left;
+    width: 100%;
+    background-color: #222539;
+}
+.logo{
+    float: left;
+    width: 33%;
+}
+.logo h1{
+    font-family: raleway;
+    font-size: 30px;
+    font-weight: 400;
+    color:#CA0027;
+    text-align: center;
+}
+.search {
+    float: left;
+    width: 30%;
+    text-align: center;
+    margin: 1.5em 0em;
+}
+
+input {
+    width: 25em;
+    height: 2em;
+    border: 1px solid transparent;
+    border-radius: 15px 0px 0px 15px;
+    font-family: raleway;
+    font-size: 14px;
+    font-weight: 400;
+}
+.search button {
+    border: 1px solid transparent;
+    background: white;
+    height: 2.4em;
+    color: #D0D0D0;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.signup{
+    float:left;
+    width: 30%;
+    text-align: center;
+    margin: 1.5em 0em;
+}
+
+.signup button {
+    border: 1px solid #CA0027;
+    border-radius: 34px;
+    width: 8em;
+    height: 2.5em;
+    background-color: transparent;
+    color: #CA0027;
+    font-family: raleway;
+    font-size: 16px;
+}
+
+.signup button:hover{
+    background-color: #CA0027;
+    color: white;
+    border: 1px solid transparent;
+}
+
+.hero_section{
+    float: left;
+    width: 100%;
+    background-image: url(../image/bg_1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 40em;
+}
+/*.content{
+    float:left;
+    width: 100%;
+    text-align: center;
+    margin: 2em;
+}
+.content h1{
+    font-family: oswald;
+    font-size: 48px;
+    font-weight: 600;
+    color: beige;
+}
+
+.content h3{
+    font-family: oswald;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1em;
+    color: burlywood;
+}*/
+.movies
+{
+    /*float: left;
+    width: 100%;
+    max-width:25%;
+    margin: 0 ;
+    padding: 1em 0 ;*/
+    display: none;
+    
+}
+.bg_image{
+    float:left;
+    width:100%;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.4),
+       rgba(0,0,0,0.4)
+      ), url(../image/bg_4.jpg);
+    filter: blur(4px);
+}
+.poster{
+    float: left;
+    width: 40%;
+    text-align: center;
+}
+.poster img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.datails{
+    float: right;
+    width: 60%;
+}
+#mtitle{
+    font-family: nunito;
+    font-size: 20px;
+    font-weight: 700;
+    color:white;
+}
+.footer{
+    float: left;
+    width: 100%;
+    background-color:#222539;
+}
+.footer p{
+    font-family: raleway;
+    font-size: 15px;
+    font-weight: 400;
+    color:white;
+    text-align: center;
+}

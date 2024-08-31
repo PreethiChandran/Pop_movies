@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>POP MOVIES</title>
+    <meta></meta>
+    <link rel="stylesheet" type="text/css" href="css/style.css"></link>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<script src="js/style.js"></script>
+<script>
+
+
+    function act()
+    {
+        var a = document.getElementById("mname").value;
+        var http = new XMLHttpRequest();
+        http.onreadystatechange = function() 
+        {
+            if(http.readystate == 4 && http.status==200)
+            {
+                console.log(http.responseText)
+                var mdata = JSON.parse(http.responseText);
+                document.getElementById("footer").style.display = "block";
+                document.getElementById("movies").style.display = "block";
+                document.getElementById("mtitle").innerHTML = mdata.Title;
+                document.getElementById("mactors").innerHTML = mdata.Actors;
+                document.getElementById("mrating").innerHTML = mdata.Ratings[1].Value;
+            }
+        }
+        http.open("get", "http://www.omdbapi.com/?t="+a+"&apikey=c429066e", false);
+        http.send();
+        console.log("test");
+    }
+
+</script>
+</head>
+
+<body>
+    <div class="header" id="header">
+        
+            <div class="logo">
+                <h1>PoP MovieS</h1>
+            </div>
+             <div class="search" id="search">
+                <form id="form">
+               <input type="text"  placeholder=" search for movies" id="mname">
+              <!--<button onclick="act()"><i class="fa fa-search"></i></button>--> 
+             </form>
+             <button onclick="act()"><i class="fa fa-search"></i></button>
+            </div>
+             <div class="signup">
+                 <button>SignUp</button>
+             </div> 
+         </div>
+    </div>
+    <div class="movies" id="movies">
+        <div class="bg_image">
+        <div class="poster">
+            <img src="" alt="" id="mimg"></img> <br>
+        </div>
+        <div class="details">
+            <span id="mtitle"></span><br>
+            <span id="mactors"></span>
+            <span id="mrating"></span>
+        </div>
+    </div>
+    </div>
+    <div class="hero_section" >
+    </div>
+    <div class="footer" id="footer">
+        <p>&#169; @ 2021 Preethi_Chandran </p>
+    </div>
+</body>
+<script>
+
+
+    function act()
+    {
+        var a = document.getElementById("mname").value;
+        var http = new XMLHttpRequest();
+        http.onreadystatechange = function() 
+        {
+            if(http.readystate == 4 && http.status==200)
+            {
+                console.log(http.responseText)
+                var mdata = JSON.parse(http.responseText);
+                
+                document.getElementById("movies").style.display = "block";
+                document.getElementById("mtitle").innerHTML = mdata.Title;
+                document.getElementById("mactors").innerHTML = mdata.Actors;
+                document.getElementById("mrating").innerHTML = mdata.Ratings[1].Value;
+            }
+        }
+        http.open("get", "http://www.omdbapi.com/?t="+a+"&apikey=c429066e", false);
+        http.send();
+        console.log("test");
+    }
+
+</script>
+</html>
